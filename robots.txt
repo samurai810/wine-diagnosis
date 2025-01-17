@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://samurai810.github.io/wine-diagnosis/sitemap.xml
