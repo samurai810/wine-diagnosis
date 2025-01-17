@@ -1,0 +1,224 @@
+/* グローバル設定 */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FAF9F6;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #c60101;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-icon {
+    font-size: 20px;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.result-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8B0000;
+    margin-bottom: 15px;
+}
+
+.result-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* 診断結果セクション */
+.container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container h3 {
+    font-size: 35px;
+    font-family: 游明朝体;
+    margin-bottom: 35px;
+    color: #333;
+}
+
+.container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* カードコンテナ */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 横長カードのスタイル */
+.card {
+    display: flex; /* 横並び配置 */
+    align-items: flex-start; /* 上揃えに配置 */
+    flex-direction: row; /* 横方向に配置 */
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 15px auto;
+}
+
+/* 画像セクション */
+.card img {
+    flex-shrink: 0;
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-right: 15px; /* 画像とテキスト間に余白を追加 */
+}
+
+/* テキストセクション */
+.card .card-details {
+    display: flex;
+    flex-direction: column; /* テキストを縦方向に並べる */
+    justify-content: space-between;
+    text-align: left;
+    flex: 1; /* 残りのスペースを使用 */
+}
+
+.card .card-details h4 {
+    font-size: 18px;
+    margin: 0 0 10px 0; /* 下に余白を設定 */
+    color: #333;
+    font-weight: bold;
+}
+
+.card .card-details p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Amazonボタン */
+.card .amazon-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #FFD700;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card .amazon-button:hover {
+    background-color: #FFC107;
+    transform: scale(1.02);
+}
+.back-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #8B0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #C60101;
+}
+
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #FAF9F6;
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row; /* 横並びを維持 */
+        justify-content: flex-start; /* 子要素を左寄せ */
+        text-align: left; /* ヘッダー内のテキストを左寄せ */
+        padding: 10px; /* 余白を調整 */
+    }
+
+    header h1 {
+        margin-left: 10px; /* アイコンとタイトル間の余白を追加 */
+    }
+
+    header nav {
+        flex-direction: column; /* ナビゲーションだけ縦並び */
+        gap: 10px;
+        margin-top: 10px; /* タイトルとナビゲーション間に余白 */
+    }
+
+    .card {
+        flex-direction: column; /* カード全体を縦方向に配置 */
+        align-items: center; /* 中央揃え */
+        width: 100%;
+    }
+
+    .card img {
+        margin-right: 0; /* 横方向の余白をリセット */
+        margin-bottom: 15px; /* 縦方向の余白を追加 */
+        align-self: center; /* 画像を中央揃え */
+    }
+
+    .card .card-details {
+        align-items: center; /* テキストを中央揃え */
+        text-align: center; /* テキストの内容を中央揃え */
+    }
+
+    .card .amazon-button {
+        align-self: center; /* ボタンを中央揃え */
+        margin-top: 15px; /* テキストとの間隔を調整 */
+    }
+
+    footer {
+        text-align: center;
+        flex-direction: column;
+    }
+}
